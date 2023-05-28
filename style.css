@@ -11,6 +11,7 @@ body{
     background-color: #e2e8f0;
     display: flex;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 aside{
@@ -110,9 +111,9 @@ nav button:nth-child(even){
 
 .main{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1fr;
     justify-content: baseline;
-    padding: 20px 40px;
+    padding: 20px;
 }
 
 
@@ -136,18 +137,28 @@ nav button:nth-child(even){
 .announcement-box{
     background-color: white;
     border-radius: 5px;
-    height: 230px;
-    max-height: 230px;
     max-width: 250px;
     margin-top: 5px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .trending-box{
     background-color: white;
     border-radius: 5px;
-    height: 150px;
-    max-height: 150px;
     max-width: 250px;
     margin-top: 5px;
+}
+
+.announce{
+    height: 65px;
+    width: 80%;
+    border-bottom: 1px inset;
+}
+
+.trend{
+    height: 48.75px;
+    width: 80%;
 }
