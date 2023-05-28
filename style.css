@@ -22,6 +22,20 @@ aside{
     width: 200px;
 }
 
+.logo, .sidebar-item{
+    display: flex;
+    align-items: center;
+}
+
+.logo img, .sidebar-item img{
+    filter: invert(1);
+}
+
+.sidebar-item img{
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
 .sidebar-group{
     display: grid;
     gap: 10px;
@@ -69,10 +83,10 @@ header{
 }
 
 .profile{
-    width: 30px;
-    height: 30px;
-    background-color: #facc15;
+    width: 32px;
+    height: 32px;
     border-radius: 50px;
+    display: flex;
 }
 
 nav{
@@ -91,7 +105,6 @@ nav{
 .profile-big{
     width: 48px;
     height: 48px;
-    background-color: #facc15;
     border-radius: 50px;
 }
 
