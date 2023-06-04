@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -9,169 +8,143 @@
 
 body{
     background-color: #e2e8f0;
-    display: flex;
     min-height: 100vh;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }
 
 aside{
     background-color: #1992d4;
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     color: white;
-    grid-column: 1 / 2;
-    width: 200px;
+    height: 100%;
+    padding: 10px;
+    padding-right: 65px;
+    min-width: min(150px, 25%);
 }
 
-.logo, .sidebar-item{
+ul{
+    list-style: none;
+}
+
+li, .logo{
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-.logo img, .sidebar-item img{
+li{
+    margin-bottom: 10px;
+}
+
+.icon{
+    filter: invert(1);
+    height: 15px;
+    width: 15px;
+}
+
+.logo-icon{
     filter: invert(1);
 }
 
-.sidebar-item img{
-    margin-bottom: 5px;
-    margin-right: 5px;
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.sidebar-group{
+main{
+    height: 100%;
     display: grid;
-    gap: 10px;
-    margin-top: 30px;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 6fr;
 }
 
-.settings{
-    margin-top: 40px;
-}
-
-.content{
-    flex: 2;
-}
 
 header{
     background-color: white;
-    padding: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 4px 1px #b3b7bd;
 }
 
-.search{
+.top-header, .bottom-header{
     display: grid;
-    grid-template-columns: 5fr 1fr;
-    gap: 100px;
+    grid-template-columns: 3fr 1fr;
+    padding: 10px 20px;
+    padding-right: 0;
+    gap: 20px;
 }
 
-.search-bar{
-    width: 100%;
-    height: 100%;
-    flex: 2;
+.bottom-header{
+    padding-right: 40px;
+}
+
+.search, .user-actions{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#search-bar{
+    box-shadow: inset 1px 1px 4px #c4c9d0;
+    padding: 0 10px;
+    padding-top: 2px;
+}
+
+.user-actions{
+    justify-content: center;
+}
+
+.user-actions{
+    gap: 20px;
+    font-weight: bold;
+}
+
+textarea{
+    width: 90%;
+    min-height: 20px;
+    resize: none;
     border-radius: 20px;
+    border: none;
     background-color: #e2e8f0;
 }
 
-.left-search{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.right-search{
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.profile{
-    width: 32px;
-    height: 32px;
-    border-radius: 50px;
-    display: flex;
-}
-
-nav{
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hello{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.profile-big{
-    width: 48px;
-    height: 48px;
-    border-radius: 50px;
-}
-
-nav button{
-    height: 30px;
-    width: 80px;
-    border: none;
+.user-small{
     border-radius: 20px;
+    height: 30px;
+    width: 30px;
+}
+
+.user-big{
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+}
+
+.greet{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.user-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+button{
     background-color: #1992d4;
     color: white;
-}
-
-nav button:nth-child(even){
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.main{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    justify-content: baseline;
-    padding: 20px;
-}
-
-
-.project-cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
-    gap: 10px;
-}
-
-.project-card{
-    background-color: white;
-    border-radius: 5px;
-    border-left: 4px solid #f0b429;
-    height: 130px;
-    width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.announcement-box{
-    background-color: white;
-    border-radius: 5px;
-    max-width: 250px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.trending-box{
-    background-color: white;
-    border-radius: 5px;
-    max-width: 250px;
-    margin-top: 5px;
-}
-
-.announce{
-    height: 65px;
-    width: 80%;
-    border-bottom: 1px inset;
-}
-
-.trend{
-    height: 48.75px;
-    width: 80%;
+    border: none;
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
 }
