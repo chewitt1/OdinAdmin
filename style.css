@@ -79,7 +79,8 @@ header{
     border-radius: 20px;
     background-color: #E2E8F0;
     border: none;
-    min-height: 30px;
+    min-height: 22px;
+    padding: 0 10px;
 }
 
 .user-actions, .header-buttons{
@@ -111,6 +112,13 @@ header{
     color: white;
     font-weight: bold;
     font-size: 12px;
+}
+
+.header-buttons > button:hover{
+    cursor: pointer;
+    border: 1px solid black;
+    color: #1992D4;
+    background-color: white;
 }
 
 .content{
@@ -195,4 +203,13 @@ hr{
 }
 
 
+.user-small:hover, .user-big:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 4px 4px #F0B429;
+}
+
+li:hover, li > h6:hover, .card-title:hover, .announcement-title:hover{
+    cursor: pointer;
+    color: #F0B429;
+}
 
