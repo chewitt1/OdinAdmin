@@ -213,3 +213,14 @@ li:hover, li > h6:hover, .card-title:hover, .announcement-title:hover{
     color: #F0B429;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Dummy Pages*/
+.profile-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
